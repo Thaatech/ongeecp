@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mostramos o trabalho que é feito, com as crianças e adolescentes da comunidade do Morro do Engenho da Rainha.">
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Fale conosco - Ong EECP - Centro Cultural e Esportivo</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="2.png" alt="Logo ONG EECP"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a>
+                    <!--<ul class="menu2">
+                        <li><a href="colaboradores.html">Colaboradores</a></li>
+                     </ul>-->
+                </li>
+                      <li><a href="projetos.html">Projetos</a>
+                       <!-- <ul class="menu2">
+                              <li><a href="futbol_infantil.html">Futebol Infantil</a></li>
+                              <li><a href="zumba.html">Zumba</a></li>
+                              <li><a href="funcional.html">Funcional</a></li>
+                              <li><a href="funcional_dancantes.html">Funcional Dançante</a></li>
+                              <li><a href="aniversarios.html">Aniversários</a></li>
+                              <li><a href="passeios.html">Passeio</a></li>
+                           </ul>-->
+                    </li>
+             <!--   <li><a href="parceiros.html">Parceiros</a>
+                    <ul>
+                        <li><a href="formulario_parceiro.html">Seja Parceiro</a></li>
+                        <li><a href="parceiros.html">Nossos Parceiros</a></li>
+                     </ul>
+                </li>-->
+                <li><a href="formulario.html">Contato</a>
+                    <!--<ul>
+                        <li><a href="https://wa.me/55+21+968803498">WhatsApp</a></li>
+                        <li><a href="formulario">E-mail</a></li>
+                        <li><a href="formulario.html">Fale conosco</a></li>-->
+                     </ul>
+                </li>
+        </ul>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-principal">
+                <div >
+                    <h1 class="formulario-titulo">Contato</h1>
+                    <br>
+                    <form class="formulario" action="https://api.staticforms.xyz/submit" method="post">
+                        <label>Nome</label>
+                        <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                        <br>
+                        <label>Telefone</label>
+                        <input type="text" name="telefone" placeholder="Digite seu número" autocomplete="off" required>
+                        <br>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                        <br>
+                        <label>Mensagem</label>
+                        <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                        <br>
+                        <button type="submit" onclick="validarEmail()">Enviar</button>
+                        <input type="hidden" name="accessKey" value="2101a71f-d2ce-4884-bad1-9efcd8ffa674">
+                        <input type="hidden" name="redirectTo" value="https://ongeecp.github.io/ongeecp/">
+                    </form>
+                    <br>
+                    <p id="mensagem"></p>
+                    <p id="mensagem2"></p>
+                </div>
+            </div>
+            <div class="conteudo-principal-imagem">
+                <img src="2.png" alt="Logo2.">
+            </div>
+        </section>
+        <section class="conteudo-secundario">
+            <div class="conteudo-secundario-casa">
+                <a href="https://www.instagram.com/ongeecp/"><img class="conteudo-secundario-links" src="instagram.png" alt="instagram"></a>
+                <a href="https://www.facebook.com/BrancoOlive"><img class="conteudo-secundario-links" src="facebook.png" alt="facebook"></a>
+            </div>
+            <div class="conteudo-secundario-botao-casa">
+                <a href="https://wa.me/5521968803498"><img class="whatsapp" src="WhatsApp.png" alt=""></a>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p><strong>Copyright © 2024 - Todos os direitos reservados - Layout e Programação: @thaatech</strong></p>
+    </footer>
+    <script>
+        function validarEmail() {
+            const emailInput = document.getElementById("email");
+            const email = emailInput.value;
+            const errorMessage = document.getElementById("errorMessage");
+  
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (regex.test(email)) {
+                document.getElementById('mensagem').textContent = 'E-mail válido.';
+                document.getElementById('mensagem').style.color = 'green';
+            } else{
+                document.getElementById('mensagem2').textContent = 'E-mail inválido.'
+                document.getElementById('mensagem2').style.color = 'red';
+
+            }
+        }
+    </script>
+
+  
+</body>
+</html>
